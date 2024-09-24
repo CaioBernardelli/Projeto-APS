@@ -1,0 +1,14 @@
+@startuml
+actor "Usuário" as usuario
+
+rectangle "Sistema de Gerenciamento de Conta" {
+    usecase "Alterar E-mail" as AlterarEmail
+    usecase "Enviar E-mail de Confirmação" as EnviarEmailConfirmacao
+    usecase "Acessar Página de Alteração" as AcessarPaginaAlteracao
+}
+
+usuario --> AlterarEmail
+AlterarEmail --> EnviarEmailConfirmacao
+EnviarEmailConfirmacao --> AcessarPaginaAlteracao
+AcessarPaginaAlteracao <-- usuario
+@enduml
