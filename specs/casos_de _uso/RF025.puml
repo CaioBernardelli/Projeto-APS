@@ -1,0 +1,17 @@
+@startum
+actor Gestor as G
+
+rectangle Sistema {
+    G --> (Configurar Critérios de Equipamento)
+    G --> (Configurar Periodicidade de Arquivamento)
+    G --> (Visualizar Histórico de Movimentações e Manutenções)
+    G --> (Arquivar Equipamento)
+    G --> (Revisar Equipamento Arquivado)
+    G --> (Reativar Equipamento Arquivado)
+    G --> (Excluir Equipamento Arquivado)
+
+    (Revisar Equipamento Arquivado) --> (Reativar Equipamento Arquivado) : <<include>>
+    (Revisar Equipamento Arquivado) --> (Excluir Equipamento Arquivado) : <<include>>
+}
+
+@enduml

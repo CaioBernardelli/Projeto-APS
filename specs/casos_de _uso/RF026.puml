@@ -1,0 +1,12 @@
+@startuml
+actor Usuário as U
+
+rectangle Sistema {
+    U --> (Visualizar Histórico de Movimentação)
+    (Visualizar Histórico de Movimentação) --> (Ver Transferências entre Departamentos) : <<include>>
+    (Visualizar Histórico de Movimentação) --> (Ver Manutenções) : <<include>>
+    (Visualizar Histórico de Movimentação) --> (Ver Trocas de Componentes) : <<include>>
+}
+
+@enduml
+

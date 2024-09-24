@@ -1,0 +1,16 @@
+@startuml
+actor "Usuário" as usuario
+actor "Gestor" as gestor
+
+rectangle "Sistema de Gerenciamento de Inventário" {
+    usecase "Manter Inventário" as ManterInventario
+    usecase "Buscar Equipamentos" as BuscarEquipamentos
+    usecase "Gerenciar Permissões" as GerenciarPermissoes
+    usecase "Gerar Relatórios" as GerarRelatorios
+}
+
+usuario --> ManterInventario
+usuario --> BuscarEquipamentos
+gestor --> GerenciarPermissoes
+gestor --> GerarRelatorios
+@enduml

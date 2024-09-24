@@ -1,0 +1,18 @@
+
+
+@startuml
+actor Gestor as G
+
+rectangle Sistema {
+    G --> (Configurar Idiomas)
+    G --> (Selecionar Português do Brasil)
+    G --> (Selecionar Inglês)
+    G --> (Selecionar Espanhol)
+
+    (Configurar Idiomas) --> (Selecionar Português do Brasil) : <<include>>
+    (Configurar Idiomas) --> (Selecionar Inglês) : <<include>>
+    (Configurar Idiomas) --> (Selecionar Espanhol) : <<include>>
+}
+
+@enduml
+
